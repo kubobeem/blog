@@ -25,4 +25,4 @@ posts/YYYY-MM-DD-slug.md
 | style.css | 見た目 |
 | app.js | 読み込みと描画 |
 
-`app.js` は一覧を日付の新しい順に並べるだけ。記事のURLは `index.html#2026-11-04-hello` みたいになる。
+`app.js` は一覧を日付の新しい順に並べるだけ。記事のURLは `/2026-11-04-hello` でも `/#2026-11-04-hello` でも開ける。

@@ -41,3 +41,11 @@ npx wrangler deploy
 ```
 
 アカウントが2つあるので `CLOUDFLARE_ACCOUNT_ID` の指定が必要（kuboes 側）。`wrangler.jsonc` が `assets.directory: "."` でこのフォルダをそのまま配信する（`.assetsignore` で `.git` や README は除外）。
+
+## URL
+
+- `/` … 記事一覧
+- `/2026-11-04-hello` または `/2026-11-04-hello/` … その記事（`/#2026-11-04-hello` でも可）
+- 存在しないパスは一覧を返す（`not_found_handling: single-page-application`）
+
+アセットは `/style.css` のようなルート相対パスなので、ドメイン直下に置く前提。

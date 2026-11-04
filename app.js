@@ -1,9 +1,9 @@
-// 日付の新しい順に一覧を出し、#slug でその記事を表示する
+// 日付の新しい順に一覧を出し、#slug（または /slug）でその記事を表示する
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 async function load(files) {
   return Promise.all(files.map(async (file) => {
-    const md = await (await fetch(file)).text();
+    const md = await (await fetch("/" + file)).text();
     const slug = file.replace(/^posts\//, "").replace(/\.md$/, "");
     return {
       slug,
@@ -14,8 +14,14 @@ async function load(files) {
   }));
 }
 
+function currentSlug() {
+  // #slug でも /slug（末尾スラッシュあり/なし）でも同じ記事を開く
+  const raw = location.hash.slice(1) || location.pathname.replace(/^\/+|\/+$/g, "").split("/").pop();
+  return decodeURIComponent(raw || "");
+}
+
 function view(posts) {
-  const post = posts.find((p) => p.slug === decodeURIComponent(location.hash.slice(1)));
+  const post = posts.find((p) => p.slug === currentSlug());
   const main = document.getElementById("posts");
 
   if (post) {
@@ -24,7 +30,7 @@ function view(posts) {
   <p class="date">${esc(post.date)}</p>
   ${marked.parse(post.body)}
 </article>
-<p class="back"><a href="index.html">&laquo; 記事一覧へ戻る</a></p>`;
+<p class="back"><a href="/">&laquo; 記事一覧へ戻る</a></p>`;
   } else {
     main.innerHTML = `<ul class="entries">${posts.map((p) =>
       `<li><span class="date">${esc(p.date)}</span><a href="#${esc(p.slug)}">${esc(p.title)}</a></li>`
@@ -36,7 +42,7 @@ function view(posts) {
 
 (async () => {
   try {
-    const posts = (await load(await (await fetch("posts.json")).json()))
+    const posts = (await load(await (await fetch("/posts.json")).json()))
       .sort((a, b) => b.slug.localeCompare(a.slug)); // slug の先頭が日付なので新しい順になる
     view(posts);
     addEventListener("hashchange", () => view(posts));
