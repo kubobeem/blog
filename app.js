@@ -21,7 +21,8 @@ function currentSlug() {
 }
 
 function view(posts) {
-  const post = posts.find((p) => p.slug === currentSlug());
+  const slug = currentSlug();
+  const post = posts.find((p) => p.slug === slug);
   const main = document.getElementById("posts");
 
   if (post) {
@@ -31,13 +32,20 @@ function view(posts) {
   ${marked.parse(post.body)}
 </article>
 <p class="back"><a href="/">&laquo; 記事一覧へ戻る</a></p>`;
+  } else if (slug) {
+    main.innerHTML = `<div class="notfound">
+  <h2>404</h2>
+  <p>ページが見つかりません。</p>
+  <p><code>${esc(slug)}</code> という記事は存在しません。URL を打ち間違えたか、記事を消したか、そのどちらかです。</p>
+  <p><a href="/">&laquo; 記事一覧へ戻る</a></p>
+</div>`;
   } else {
     main.innerHTML = `<ul class="entries">${posts.map((p) =>
       `<li><span class="date">${esc(p.date)}</span><a href="#${esc(p.slug)}">${esc(p.title)}</a></li>`
     ).join("")}</ul>`;
   }
 
-  document.title = post ? `${post.title} - 日々のメモ` : "日々のメモ";
+  document.title = post ? `${post.title} - 日々のメモ` : slug ? "404 - 日々のメモ" : "日々のメモ";
 }
 
 (async () => {

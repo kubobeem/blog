@@ -120,6 +120,19 @@ article h3 {
   font-size: 12px;
 }
 
+/* 404 */
+.notfound h2 {
+  margin: 8px 0 12px;
+  padding: 0;
+  font-size: 40px;
+  color: #bbb;
+  border: 0;
+  text-align: center;
+}
+.notfound p {
+  text-align: center;
+}
+
 /* リンク */
 a {
   color: #0055aa;
