@@ -1,5 +1,7 @@
 # ローカル LLM 環境を b11870 に総入れ替えして、速度の上限を測った
 
+<!-- tags: LLM, ローカルLLM -->
+
 `~/bin` の llama-server / llama-cli / llama-bench を b11870（v0.7.0 / commit 74bca3950）に入れ替えた。ついでに「なんか遅くなった」の原因を実測で切り分けた。
 
 ## 構成

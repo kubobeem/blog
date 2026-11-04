@@ -72,6 +72,12 @@ main {
   padding-left: 16px;
   list-style: square;
 }
+.side .counter {
+  margin-bottom: 18px;
+}
+.side .counter img {
+  max-width: 100%;
+}
 
 /* 記事一覧 */
 .entries {
@@ -118,6 +124,16 @@ article h3 {
 .back {
   margin-top: 16px;
   font-size: 12px;
+}
+.tags, .related {
+  margin: 14px 0 0;
+  padding-top: 6px;
+  border-top: 1px dotted #ccc;
+  font-size: 11px;
+  color: #777;
+}
+.related a {
+  margin-right: 2px;
 }
 
 /* 404 */

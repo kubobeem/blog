@@ -1,5 +1,7 @@
 # ターミナルで YouTube を ASCII 再生するツールに色を足した
 
+<!-- tags: グラフィックス, ターミナル -->
+
 `ascii-video-player` という、YouTube の動画を ASCII アートにしてターミナルで流すツールを fork して、トゥルーカラー対応を入れた。
 
 ## 仕組み

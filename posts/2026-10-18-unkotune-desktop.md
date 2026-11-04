@@ -1,5 +1,7 @@
 # Android の YouTube Music クライアントを Windows の exe にした
 
+<!-- tags: デスクトップアプリ, 音楽 -->
+
 ArchiveTune という Android 用の YouTube Music クライアントを fork して、エミュレータも VM も使わずに Windows の単体 exe で動かした。名前は途中で Unkotune に変えて、v0.1.0 として公開した。
 
 ## 何が大変だったか

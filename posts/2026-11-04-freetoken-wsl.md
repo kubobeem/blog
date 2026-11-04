@@ -1,5 +1,7 @@
 # WSL2 に 35B のローカル推論環境を足した
 
+<!-- tags: LLM, FreeToken -->
+
 手元の GPU でそこそこ賢いモデルを回したくて、FreeToken の fork（atomicmilkshake 版）を WSL2 に入れた。
 
 環境は RTX 4060 8GB、RAM 39GB、CUDA 13.1。既存の環境を壊さないように、別ディレクトリ・別 venv・別ポート（8080）で動かす。SHA は `cd0a6b5` で固定。

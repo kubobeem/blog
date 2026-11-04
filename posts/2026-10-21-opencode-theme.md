@@ -1,5 +1,7 @@
 # opencode のテーマを緑に作り直した
 
+<!-- tags: opencode -->
+
 opencode の見た目が飽きてきたので、標準の `claude-transparent` をコピーして派生テーマを作った。名前は投げやりに `claude-transparent-2`。
 
 ## やったこと

@@ -1,5 +1,7 @@
 # 時計アプリを Nothing 風に作り替えている
 
+<!-- tags: Android -->
+
 AOSP 系の時計アプリ（FOSS の Clock の fork）を、Nothing OS の見た目に変える作業。v1 はほぼ実装して、v2 は「Material すぎる」ところを全部剥がす方針を決めたところ。
 
 ## 見た目の方針

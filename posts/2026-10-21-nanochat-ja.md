@@ -1,5 +1,7 @@
 # 日本語だけで学習した 49M のモデルを一晩で作った
 
+<!-- tags: LLM, 機械学習 -->
+
 nanochat を fork して、日本語に寄せた小型モデルを作った。名前は nano-ja。合成データ作りから、tokenizer、pretrain、SFT、GGUF 化、WebGPU のデモ公開まで一通り通した。
 
 ## 構成
