@@ -1,37 +1,271 @@
 [
-  "posts/pin-about.md",
-  "posts/2026-11-04-hello.md",
-  "posts/2026-11-04-opencode-interviewer.md",
-  "posts/2026-11-04-freetoken-wsl.md",
-  "posts/2026-11-01-ft-test.md",
-  "posts/2026-10-31-web-unify.md",
-  "posts/2026-10-31-kubokubo2.md",
-  "posts/2026-10-31-homepage.md",
-  "posts/2026-10-30-midi-burn.md",
-  "posts/2026-10-30-esp32-music.md",
-  "posts/2026-10-28-esp32-music-player.md",
-  "posts/2026-10-28-esp32-mjpeg.md",
-  "posts/2026-10-27-yt-tft-stream.md",
-  "posts/2026-10-26-midi-sensor.md",
-  "posts/2026-10-26-esp32-tft-test.md",
-  "posts/2026-10-25-pc-cleanup.md",
-  "posts/2026-10-25-llama-bench.md",
-  "posts/2026-10-25-deskclock-nothing.md",
-  "posts/2026-10-24-midi-keyboard.md",
-  "posts/2026-10-22-gboard-lite.md",
-  "posts/2026-10-21-opencode-theme.md",
-  "posts/2026-10-21-nanochat-ja.md",
-  "posts/2026-10-20-markdown-memo.md",
-  "posts/2026-10-18-unkotune-desktop.md",
-  "posts/2026-10-17-ymm4-editor.md",
-  "posts/2026-10-07-superfile.md",
-  "posts/2026-09-29-aether.md",
-  "posts/2026-09-26-news-video.md",
-  "posts/2026-09-14-x-bot-oss.md",
-  "posts/2026-09-13-xbot-auto.md",
-  "posts/2026-09-12-ascii-video-player.md",
-  "posts/2026-08-31-vibribbon.md",
-  "posts/2026-08-31-superfile-speed.md",
-  "posts/2026-08-30-minimax-h3.md",
-  "posts/2026-08-28-shogun.md"
+  {
+    "file": "posts/pin-about.md",
+    "title": "このブログについて",
+    "tags": [
+      "このブログ"
+    ]
+  },
+  {
+    "file": "posts/2026-11-04-opencode-interviewer.md",
+    "title": "opencode これあると便利1選：曖昧な依頼を先に仕様にしてくれる interviewer",
+    "tags": [
+      "opencode",
+      "開発環境"
+    ]
+  },
+  {
+    "file": "posts/2026-11-04-hello.md",
+    "title": "はじめました",
+    "tags": [
+      "このブログ"
+    ]
+  },
+  {
+    "file": "posts/2026-11-04-freetoken-wsl.md",
+    "title": "WSL2 に 35B のローカル推論環境を足した",
+    "tags": [
+      "LLM",
+      "FreeToken"
+    ]
+  },
+  {
+    "file": "posts/2026-11-01-ft-test.md",
+    "title": "35B の MoE を 8GB の GPU で動かして、上限を確定させた",
+    "tags": [
+      "LLM",
+      "FreeToken"
+    ]
+  },
+  {
+    "file": "posts/2026-10-31-web-unify.md",
+    "title": "サイトを1リポジトリにまとめる計画",
+    "tags": [
+      "Web"
+    ]
+  },
+  {
+    "file": "posts/2026-10-31-kubokubo2.md",
+    "title": "「You are an idiot」のパロディを自分のドメインで公開した",
+    "tags": [
+      "ネタ",
+      "Web"
+    ]
+  },
+  {
+    "file": "posts/2026-10-31-homepage.md",
+    "title": "1990年代風の個人ページを作った",
+    "tags": [
+      "Web"
+    ]
+  },
+  {
+    "file": "posts/2026-10-30-midi-burn.md",
+    "title": "IR LED を1個焼いた",
+    "tags": [
+      "電子工作",
+      "MIDI"
+    ]
+  },
+  {
+    "file": "posts/2026-10-30-esp32-music.md",
+    "title": "ESP32 音楽プレイヤー、Bluetooth まで繋がってタッチで止まった",
+    "tags": [
+      "電子工作",
+      "ESP32"
+    ]
+  },
+  {
+    "file": "posts/2026-10-28-esp32-music-player.md",
+    "title": "ESP32 単体の音楽プレイヤーを作る仕様を書いた",
+    "tags": [
+      "電子工作",
+      "ESP32"
+    ]
+  },
+  {
+    "file": "posts/2026-10-28-esp32-mjpeg.md",
+    "title": "ESP32 で TFT に動画を出した（5.8fps）",
+    "tags": [
+      "電子工作",
+      "ESP32"
+    ]
+  },
+  {
+    "file": "posts/2026-10-27-yt-tft-stream.md",
+    "title": "YouTube の映像を ESP32 の画面に、音はブラウザで",
+    "tags": [
+      "電子工作",
+      "ESP32"
+    ]
+  },
+  {
+    "file": "posts/2026-10-26-midi-sensor.md",
+    "title": "フォトセンサ1個をベンチにかけた",
+    "tags": [
+      "電子工作",
+      "MIDI"
+    ]
+  },
+  {
+    "file": "posts/2026-10-26-esp32-tft-test.md",
+    "title": "ESP32 で 2.8インチ TFT を点灯させた",
+    "tags": [
+      "電子工作",
+      "ESP32"
+    ]
+  },
+  {
+    "file": "posts/2026-10-25-pc-cleanup.md",
+    "title": "Cドライブの掃除計画を立てた",
+    "tags": [
+      "PC"
+    ]
+  },
+  {
+    "file": "posts/2026-10-25-llama-bench.md",
+    "title": "ローカル LLM 環境を b11870 に総入れ替えして、速度の上限を測った",
+    "tags": [
+      "LLM",
+      "ローカルLLM"
+    ]
+  },
+  {
+    "file": "posts/2026-10-25-deskclock-nothing.md",
+    "title": "時計アプリを Nothing 風に作り替えている",
+    "tags": [
+      "Android"
+    ]
+  },
+  {
+    "file": "posts/2026-10-24-midi-keyboard.md",
+    "title": "フォトセンサ13個で光学式MIDIキーボードを作る",
+    "tags": [
+      "電子工作",
+      "MIDI"
+    ]
+  },
+  {
+    "file": "posts/2026-10-22-gboard-lite.md",
+    "title": "Gboard っぽい日本語キーボードを clean-room で作った",
+    "tags": [
+      "Android"
+    ]
+  },
+  {
+    "file": "posts/2026-10-21-opencode-theme.md",
+    "title": "opencode のテーマを緑に作り直した",
+    "tags": [
+      "opencode"
+    ]
+  },
+  {
+    "file": "posts/2026-10-21-nanochat-ja.md",
+    "title": "日本語だけで学習した 49M のモデルを一晩で作った",
+    "tags": [
+      "LLM",
+      "機械学習"
+    ]
+  },
+  {
+    "file": "posts/2026-10-20-markdown-memo.md",
+    "title": "記事の書き方メモ",
+    "tags": [
+      "このブログ"
+    ]
+  },
+  {
+    "file": "posts/2026-10-18-unkotune-desktop.md",
+    "title": "Android の YouTube Music クライアントを Windows の exe にした",
+    "tags": [
+      "デスクトップアプリ",
+      "音楽"
+    ]
+  },
+  {
+    "file": "posts/2026-10-17-ymm4-editor.md",
+    "title": "YMM4 のプロジェクトを編集する単一 HTML のエディタを作った",
+    "tags": [
+      "リバースエンジニアリング",
+      "ツール"
+    ]
+  },
+  {
+    "file": "posts/2026-10-07-superfile.md",
+    "title": "ファイル共有サービスを、公開できるところまで整えた",
+    "tags": [
+      "Web",
+      "Cloudflare"
+    ]
+  },
+  {
+    "file": "posts/2026-09-29-aether.md",
+    "title": "シェーダーパックを書いていて、コンパイルが通る嘘に負けた",
+    "tags": [
+      "グラフィックス"
+    ]
+  },
+  {
+    "file": "posts/2026-09-26-news-video.md",
+    "title": "コマンド1個でニュースの縦型ショートを2本作るようにした",
+    "tags": [
+      "動画"
+    ]
+  },
+  {
+    "file": "posts/2026-09-14-x-bot-oss.md",
+    "title": "X の bot 運用を OSS パッケージにまとめた",
+    "tags": [
+      "X",
+      "ツール"
+    ]
+  },
+  {
+    "file": "posts/2026-09-13-xbot-auto.md",
+    "title": "X の bot をタスクスケジューラで回し続けるようにした",
+    "tags": [
+      "X",
+      "自動化"
+    ]
+  },
+  {
+    "file": "posts/2026-09-12-ascii-video-player.md",
+    "title": "ターミナルで YouTube を ASCII 再生するツールに色を足した",
+    "tags": [
+      "グラフィックス",
+      "ターミナル"
+    ]
+  },
+  {
+    "file": "posts/2026-08-31-vibribbon.md",
+    "title": "Vib-Ribbon 風のゲームを Cloudflare Pages に置いた",
+    "tags": [
+      "Web",
+      "ゲーム"
+    ]
+  },
+  {
+    "file": "posts/2026-08-31-superfile-speed.md",
+    "title": "ファイル共有のアップロードが遅いので並列にした",
+    "tags": [
+      "Web",
+      "Cloudflare"
+    ]
+  },
+  {
+    "file": "posts/2026-08-30-minimax-h3.md",
+    "title": "8GB の GPU で動画生成を 176 秒から 55 秒にした",
+    "tags": [
+      "生成AI",
+      "動画"
+    ]
+  },
+  {
+    "file": "posts/2026-08-28-shogun.md",
+    "title": "WSL なしで「AI 部下10人」を Windows ネイティブに移植した",
+    "tags": [
+      "opencode",
+      "マルチエージェント"
+    ]
+  }
 ]

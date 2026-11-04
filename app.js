@@ -17,19 +17,25 @@ themeBtn.addEventListener("click", () => {
 });
 labelTheme();
 
-async function load(files) {
-  return Promise.all(files.map(async (file) => {
-    const md = await (await fetch("/" + file)).text();
-    const slug = file.replace(/^posts\//, "").replace(/\.md$/, "");
-    const tags = (md.match(TAG_RE) || ["", ""])[1].split(",").map((t) => t.trim()).filter(Boolean);
-    return {
-      slug,
-      title: (md.match(/^#\s+(.+)$/m) || [])[1] || slug,
-      date: (slug.match(/^\d{4}-\d{2}-\d{2}/) || [""])[0],
-      tags,
-      body: md.replace(/^#\s+.+$/m, "").replace(TAG_RE, ""),
-    };
-  }));
+// 一覧に要るのは posts.json のメタ情報だけ。本文は記事を開いたときに取ってキャッシュする
+const load = (items) => items.map((it) => {
+  const slug = it.file.replace(/^posts\//, "").replace(/\.md$/, "");
+  return {
+    slug,
+    file: it.file,
+    title: it.title || slug,
+    tags: it.tags || [],
+    date: (slug.match(/^\d{4}-\d{2}-\d{2}/) || [""])[0],
+  };
+});
+
+const bodyCache = new Map();
+async function getBody(post) {
+  if (!bodyCache.has(post.slug)) {
+    const md = await (await fetch("/" + post.file)).text();
+    bodyCache.set(post.slug, md.replace(/^#\s+.+$/m, "").replace(TAG_RE, ""));
+  }
+  return bodyCache.get(post.slug);
 }
 
 function currentSlug() {
@@ -46,7 +52,7 @@ const entry = (p) => `<li><span class="date">${esc(p.date || "固定")}</span><a
 const list = (posts) => `<ul class="entries">${posts.map(entry).join("")}</ul>`;
 const back = `<p class="back"><a href="/">&laquo; 記事一覧へ戻る</a></p>`;
 
-function view(posts) {
+async function view(posts) {
   const slug = currentSlug();
   const post = posts.find((p) => p.slug === slug);
   const main = document.getElementById("posts");
@@ -68,15 +74,18 @@ ${back}`;
       .filter((x) => x.n > 0 && x.p.slug !== post.slug)
       .sort((a, b) => b.n - a.n || b.p.slug.localeCompare(a.p.slug))
       .slice(0, 3);
+    document.title = `${post.title} - 日々のメモ`;
+    if (!bodyCache.has(post.slug)) main.innerHTML = `<p class="loading">読み込み中…</p>`;
+    const body = await getBody(post);
+    if (currentSlug() !== slug) return; // 待っている間に別のページへ移った
     main.innerHTML = `<article>
   <h2>${esc(post.title)}</h2>
   <p class="date">${esc(post.date || "固定投稿")}</p>
-  ${marked.parse(post.body)}
+  ${marked.parse(body)}
   ${post.tags.length ? `<p class="tags">タグ: ${post.tags.map(tagLink).join(" ")}</p>` : ""}
   ${related.length ? `<p class="related">関連: ${related.map((x) => `<a href="#${esc(x.p.slug)}">${esc(x.p.title)}</a>`).join(" / ")}</p>` : ""}
 </article>
 ${back}`;
-    document.title = `${post.title} - 日々のメモ`;
   } else if (slug) {
     main.innerHTML = `<div class="notfound">
   <h2>404</h2>
@@ -102,7 +111,7 @@ function renderTags(posts) {
 
 (async () => {
   try {
-    const posts = (await load(await (await fetch("/posts.json")).json()))
+    const posts = load(await (await fetch("/posts.json")).json())
       .sort((a, b) => b.slug.localeCompare(a.slug)); // slug の先頭が日付なので新しい順になる
     renderTags(posts);
     view(posts);
