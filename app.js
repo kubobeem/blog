@@ -2,6 +2,21 @@
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 const TAG_RE = /^<!--\s*tags:\s*(.+?)\s*-->\s*$/m;
 
+// テーマ。既定は OS の設定で、押したら localStorage に固定する
+const themeRoot = document.documentElement;
+const themeBtn = document.getElementById("theme-toggle");
+if (localStorage.getItem("theme")) themeRoot.dataset.theme = localStorage.getItem("theme");
+const isDark = () => themeRoot.dataset.theme
+  ? themeRoot.dataset.theme === "dark"
+  : matchMedia("(prefers-color-scheme: dark)").matches;
+const labelTheme = () => { themeBtn.textContent = isDark() ? "ライトにする" : "ダークにする"; };
+themeBtn.addEventListener("click", () => {
+  themeRoot.dataset.theme = isDark() ? "light" : "dark";
+  localStorage.setItem("theme", themeRoot.dataset.theme);
+  labelTheme();
+});
+labelTheme();
+
 async function load(files) {
   return Promise.all(files.map(async (file) => {
     const md = await (await fetch("/" + file)).text();
