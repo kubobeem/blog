@@ -28,7 +28,7 @@ function view(posts) {
   if (post) {
     main.innerHTML = `<article>
   <h2>${esc(post.title)}</h2>
-  <p class="date">${esc(post.date)}</p>
+  <p class="date">${esc(post.date || "固定投稿")}</p>
   ${marked.parse(post.body)}
 </article>
 <p class="back"><a href="/">&laquo; 記事一覧へ戻る</a></p>`;
@@ -40,8 +40,10 @@ function view(posts) {
   <p><a href="/">&laquo; 記事一覧へ戻る</a></p>
 </div>`;
   } else {
-    main.innerHTML = `<ul class="entries">${posts.map((p) =>
-      `<li><span class="date">${esc(p.date)}</span><a href="#${esc(p.slug)}">${esc(p.title)}</a></li>`
+    main.innerHTML = `<ul class="entries">${[...posts].sort((a, b) =>
+      Number(b.slug.startsWith("pin-")) - Number(a.slug.startsWith("pin-")) || b.slug.localeCompare(a.slug)
+    ).map((p) =>
+      `<li><span class="date">${esc(p.date || "固定")}</span><a href="#${esc(p.slug)}">${esc(p.title)}</a></li>`
     ).join("")}</ul>`;
   }
 

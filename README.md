@@ -26,6 +26,8 @@ python -m http.server 8000
 | `style.css` | 2010年ごろの個人ブログ風の見た目 |
 | `app.js` | 記事の読み込みと描画 |
 | `posts.json` | 記事一覧（表示は日付の新しい順） |
+
+`posts/pin-*.md` は固定投稿として一覧の先頭に出る（日付なし・「固定」表示）。
 | `vendor/marked.min.js` | markdown → HTML（オフラインで動くよう同梱） |
 
 ## 公開
