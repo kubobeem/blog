@@ -27,3 +27,17 @@ python -m http.server 8000
 | `app.js` | 記事の読み込みと描画 |
 | `posts.json` | 記事一覧（表示は日付の新しい順） |
 | `vendor/marked.min.js` | markdown → HTML（オフラインで動くよう同梱） |
+
+## 公開
+
+- サイト: https://blog.kuboes.workers.dev （Cloudflare Pages）
+- リポジトリ: https://github.com/kubobeem/blog
+
+```powershell
+cd D:\code\blogs
+git add -A; git commit -m "Add post"; git push
+$env:CLOUDFLARE_ACCOUNT_ID="c901656c50e254e47a7645513c971359"
+npx wrangler pages deploy . --project-name blog --branch main --commit-dirty=true
+```
+
+アカウントが2つあるので `CLOUDFLARE_ACCOUNT_ID` の指定が必要（kuboes 側）。
