@@ -85,7 +85,8 @@ main {
 }
 .entries .date {
   display: inline-block;
-  width: 90px;
+  width: 76px;
+  margin-right: 8px;
   color: #999;
 }
 

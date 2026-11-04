@@ -37,7 +37,7 @@ python -m http.server 8000
 cd D:\code\blogs
 git add -A; git commit -m "Add post"; git push
 $env:CLOUDFLARE_ACCOUNT_ID="c901656c50e254e47a7645513c971359"
-npx wrangler pages deploy . --project-name blog --branch main --commit-dirty=true
+npx wrangler deploy
 ```
 
-アカウントが2つあるので `CLOUDFLARE_ACCOUNT_ID` の指定が必要（kuboes 側）。
+アカウントが2つあるので `CLOUDFLARE_ACCOUNT_ID` の指定が必要（kuboes 側）。`wrangler.jsonc` が `assets.directory: "."` でこのフォルダをそのまま配信する（`.assetsignore` で `.git` や README は除外）。
