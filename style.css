@@ -321,8 +321,18 @@ footer {
 }
 
 @media (max-width: 640px) {
-  body { padding: 0; }
-  .wrap { border: 0; }
+  body { padding: 0; font-size: 15px; line-height: 1.7; }
+  .wrap { border: 0; padding: 12px 14px 16px; }
   .layout { display: block; }
   .side { width: auto; margin-top: 20px; }
+  header h1 { font-size: 20px; }
+  article h2 { font-size: 17px; }
+  /* 一覧: 日付をタイトルの上に逃がして横幅を食わせない */
+  .entries li { padding: 8px 0; }
+  .entries .date { display: block; width: auto; margin: 0 0 2px; font-size: 11px; }
+  /* 表: 横にはみ出さず中で横スクロール */
+  table { display: block; max-width: 100%; overflow-x: auto; }
+  /* タップしやすく */
+  .theme-toggle { padding: 8px 0; }
+  .side a, .entries a { line-height: 1.7; }
 }
