@@ -76,13 +76,21 @@
 
 * { box-sizing: border-box; }
 
+html {
+  /* スマホの自動文字拡大を止める。PCと同じサイズ感で出すための土台 */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
   padding: 12px 8px;
   /* 2010年ごろの「グレーの地に白いカラム」 */
   background: var(--bg);
   color: var(--fg);
-  font-family: "MS PGothic", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  /* PCはMS Pゴシック、AndroidはNoto Sans CJK JP、Macはヒラギノ。
+     どれもゴシック体に寄せて、機種で見た目が変わりにくくする */
+  font-family: "MS PGothic", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", "Noto Sans CJK JP", sans-serif;
   font-size: 13px;
   line-height: 1.6;
 }
@@ -207,6 +215,10 @@ article h2 {
 }
 article p {
   margin: 0 0 0.7em;
+  overflow-wrap: break-word;
+}
+article a {
+  overflow-wrap: break-word;
 }
 article h3 {
   margin: 1.2em 0 0.3em;
@@ -265,7 +277,7 @@ pre {
   line-height: 1.5;
 }
 code {
-  font-family: Consolas, "Courier New", monospace;
+  font-family: Consolas, "Courier New", "Noto Sans Mono CJK JP", monospace;
   font-size: 12px;
 }
 :not(pre) > code {
@@ -335,4 +347,24 @@ footer {
   /* タップしやすく */
   .theme-toggle { padding: 8px 0; }
   .side a, .entries a { line-height: 1.7; }
+
+  /* ここからPCとの見た目・運用感の差埋め。
+     PCは本文13pxに対してサイドバー11px・タグ11px・コード12px。
+     スマホは本文15pxにしたので、他も同じ比率で大きくする。
+     本文だけ大きくすると他が相対的に小さく見える */
+  header .desc { font-size: 12px; }
+  .side { font-size: 13px; }
+  .side h3 { font-size: 13px; }
+  .date { font-size: 12px; }
+  .tags, .related { font-size: 12px; }
+  pre, code { font-size: 13px; }
+  footer { font-size: 12px; }
+  /* 一覧の行全体をタップ対象にする。タイトルだけの細いリンクだと押しにくい */
+  .entries a { display: block; padding: 8px 0; }
+  .entries li { padding: 2px 0; }
+  /* テーマ切替と戻るリンクは指で押せる高さにする */
+  .theme-toggle { display: inline-block; min-height: 44px; padding: 10px 4px; }
+  .back a { display: inline-block; padding: 10px 0; }
+  .side a { display: inline-block; padding: 3px 0; }
+  .tags a, .related a { display: inline-block; padding: 4px 2px; }
 }
