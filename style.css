@@ -1,0 +1,370 @@
+/* 明るいとき（既定） */
+:root {
+  color-scheme: light;
+  --bg: #eeeeee;
+  --panel: #fff;
+  --fg: #333;
+  --fg-strong: #444;
+  --muted: #888;
+  --date: #999;
+  --line: #ccc;
+  --line-strong: #999;
+  --pre: #fbfbfb;
+  --code: #f4f4f4;
+  --quote-bg: #fafafa;
+  --quote-fg: #666;
+  --th: #f0f0f0;
+  --link: #0055aa;
+  --visited: #774488;
+  --hover: #cc0000;
+  --hover-bg: #ffffcc;
+  --error-bg: #fff6f6;
+  --error-line: #dbb;
+  --error-fg: #a33;
+}
+
+/* 暗いとき */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #1b1b1b;
+  --panel: #232323;
+  --fg: #c9c9c9;
+  --fg-strong: #e2e2e2;
+  --muted: #8b8b8b;
+  --date: #8b8b8b;
+  --line: #444;
+  --line-strong: #666;
+  --pre: #1a1a1a;
+  --code: #2b2b2b;
+  --quote-bg: #292929;
+  --quote-fg: #aaa;
+  --th: #2e2e2e;
+  --link: #7fb2ff;
+  --visited: #c39cff;
+  --hover: #ff9090;
+  --hover-bg: #3b3b2a;
+  --error-bg: #2a1d1d;
+  --error-line: #633;
+  --error-fg: #e99;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #1b1b1b;
+    --panel: #232323;
+    --fg: #c9c9c9;
+    --fg-strong: #e2e2e2;
+    --muted: #8b8b8b;
+    --date: #8b8b8b;
+    --line: #444;
+    --line-strong: #666;
+    --pre: #1a1a1a;
+    --code: #2b2b2b;
+    --quote-bg: #292929;
+    --quote-fg: #aaa;
+    --th: #2e2e2e;
+    --link: #7fb2ff;
+    --visited: #c39cff;
+    --hover: #ff9090;
+    --hover-bg: #3b3b2a;
+    --error-bg: #2a1d1d;
+    --error-line: #633;
+    --error-fg: #e99;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html {
+  /* スマホの自動文字拡大を止める。PCと同じサイズ感で出すための土台 */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 12px 8px;
+  /* 2010年ごろの「グレーの地に白いカラム」 */
+  background: var(--bg);
+  color: var(--fg);
+  /* PCはMS Pゴシック、AndroidはNoto Sans CJK JP、Macはヒラギノ。
+     どれもゴシック体に寄せて、機種で見た目が変わりにくくする */
+  font-family: "MS PGothic", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", "Noto Sans CJK JP", sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 16px 20px 20px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+
+/* ヘッダー */
+header {
+  border-bottom: 3px double var(--line-strong);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+header h1 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+}
+header h1 a,
+header h1 a:visited {
+  color: var(--fg);
+  text-decoration: none;
+}
+header .desc {
+  margin: 2px 0 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* 2カラム */
+.layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+main {
+  flex: 1;
+  min-width: 0;
+}
+.side {
+  width: 200px;
+  flex: 0 0 200px;
+  font-size: 11px;
+  color: var(--quote-fg);
+}
+.side h3 {
+  margin: 0 0 4px;
+  padding-bottom: 2px;
+  font-size: 12px;
+  color: var(--fg-strong);
+  border-bottom: 1px dotted var(--line);
+}
+.side p {
+  margin: 0 0 18px;
+}
+.side ul {
+  margin: 0 0 18px;
+  padding-left: 16px;
+  list-style: square;
+}
+.side .counter {
+  margin-bottom: 18px;
+}
+.side .counter img {
+  max-width: 100%;
+}
+
+/* テーマ切替（リンクに見えるボタン） */
+.theme-toggle {
+  margin: 0 0 16px;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: var(--link);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.theme-toggle:hover {
+  color: var(--hover);
+  background: var(--hover-bg);
+}
+
+/* 記事一覧 */
+.entries {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.entries li {
+  padding: 5px 0;
+  border-bottom: 1px dotted var(--line);
+}
+.entries .date {
+  display: inline-block;
+  width: 76px;
+  margin-right: 8px;
+  color: var(--date);
+}
+
+/* 記事 */
+article {
+  padding-bottom: 18px;
+  border-bottom: 1px dashed var(--line);
+}
+article h2 {
+  margin: 0 0 2px;
+  padding-bottom: 2px;
+  font-size: 15px;
+  line-height: 1.5;
+  border-bottom: 1px solid var(--line-strong);
+}
+.date {
+  margin: 0 0 12px;
+  font-size: 11px;
+  color: var(--muted);
+}
+article p {
+  margin: 0 0 0.7em;
+  overflow-wrap: break-word;
+}
+article a {
+  overflow-wrap: break-word;
+}
+article h3 {
+  margin: 1.2em 0 0.3em;
+  font-size: 13px;
+  border-bottom: 1px dotted var(--line);
+}
+.back {
+  margin-top: 16px;
+  font-size: 12px;
+}
+.tags, .related {
+  margin: 14px 0 0;
+  padding-top: 6px;
+  border-top: 1px dotted var(--line);
+  font-size: 11px;
+  color: var(--muted);
+}
+.related a {
+  margin-right: 2px;
+}
+
+/* 404 */
+.notfound h2 {
+  margin: 8px 0 12px;
+  padding: 0;
+  font-size: 40px;
+  color: var(--line-strong);
+  border: 0;
+  text-align: center;
+}
+.notfound p {
+  text-align: center;
+}
+
+/* リンク */
+a {
+  color: var(--link);
+  text-decoration: underline;
+}
+a:visited {
+  color: var(--visited);
+}
+a:hover {
+  color: var(--hover);
+  background: var(--hover-bg);
+}
+
+/* コード・引用・表 */
+pre {
+  margin: 0 0 0.8em;
+  padding: 6px 8px;
+  background: var(--pre);
+  border: 1px solid var(--line);
+  overflow-x: auto;
+  font-size: 12px;
+  line-height: 1.5;
+}
+code {
+  font-family: Consolas, "Courier New", "Noto Sans Mono CJK JP", monospace;
+  font-size: 12px;
+}
+:not(pre) > code {
+  background: var(--code);
+  padding: 0 2px;
+}
+blockquote {
+  margin: 0 0 0.8em;
+  padding: 4px 10px;
+  background: var(--quote-bg);
+  border-left: 3px solid var(--line);
+  color: var(--quote-fg);
+}
+blockquote strong {
+  color: var(--fg-strong);
+  font-weight: normal;
+}
+table {
+  border-collapse: collapse;
+  margin: 0 0 0.8em;
+  font-size: 12px;
+}
+th, td {
+  border: 1px solid var(--line);
+  padding: 2px 8px;
+}
+th {
+  background: var(--th);
+  font-weight: normal;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* その他 */
+.loading, .error {
+  color: var(--muted);
+}
+.error {
+  padding: 8px;
+  border: 1px solid var(--error-line);
+  background: var(--error-bg);
+  color: var(--error-fg);
+}
+footer {
+  margin-top: 16px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  body { padding: 0; font-size: 15px; line-height: 1.7; }
+  .wrap { border: 0; padding: 12px 14px 16px; }
+  .layout { display: block; }
+  .side { width: auto; margin-top: 20px; }
+  header h1 { font-size: 20px; }
+  article h2 { font-size: 17px; }
+  /* 一覧: 日付をタイトルの上に逃がして横幅を食わせない */
+  .entries li { padding: 8px 0; }
+  .entries .date { display: block; width: auto; margin: 0 0 2px; font-size: 11px; }
+  /* 表: 横にはみ出さず中で横スクロール */
+  table { display: block; max-width: 100%; overflow-x: auto; }
+  /* タップしやすく */
+  .theme-toggle { padding: 8px 0; }
+  .side a, .entries a { line-height: 1.7; }
+
+  /* ここからPCとの見た目・運用感の差埋め。
+     PCは本文13pxに対してサイドバー11px・タグ11px・コード12px。
+     スマホは本文15pxにしたので、他も同じ比率で大きくする。
+     本文だけ大きくすると他が相対的に小さく見える */
+  header .desc { font-size: 12px; }
+  .side { font-size: 13px; }
+  .side h3 { font-size: 13px; }
+  .date { font-size: 12px; }
+  .tags, .related { font-size: 12px; }
+  pre, code { font-size: 13px; }
+  footer { font-size: 12px; }
+  /* 一覧の行全体をタップ対象にする。タイトルだけの細いリンクだと押しにくい */
+  .entries a { display: block; padding: 8px 0; }
+  .entries li { padding: 2px 0; }
+  /* テーマ切替と戻るリンクは指で押せる高さにする */
+  .theme-toggle { display: inline-block; min-height: 44px; padding: 10px 4px; }
+  .back a { display: inline-block; padding: 10px 0; }
+  .side a { display: inline-block; padding: 3px 0; }
+  .tags a, .related a { display: inline-block; padding: 4px 2px; }
+}
