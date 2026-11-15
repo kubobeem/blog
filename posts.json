@@ -7,6 +7,15 @@
   ]
  },
  {
+  "file": "posts/2026-11-15-ornith-fedora-40tps.md",
+  "title": "Fedoraで40 tok/s：Ornith 35Bが69kでも40維持、128kも使える",
+  "tags": [
+   "LLM",
+   "GPU",
+   "Linux"
+  ]
+ },
+ {
   "file": "posts/2026-11-06-google-ai-pro.md",
   "title": "Google AI Proを2年0円で取る自動化を回してみた",
   "tags": [
