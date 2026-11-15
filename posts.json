@@ -65,13 +65,6 @@
   ]
  },
  {
-  "file": "posts/2026-10-31-web-unify.md",
-  "title": "サイトを1リポジトリにまとめる計画",
-  "tags": [
-   "Web"
-  ]
- },
- {
   "file": "posts/2026-10-31-kubokubo2.md",
   "title": "「You are an idiot」のパロディを自分のドメインで公開した",
   "tags": [
@@ -97,14 +90,6 @@
  {
   "file": "posts/2026-10-30-esp32-music.md",
   "title": "ESP32 音楽プレイヤー、Bluetooth まで繋がってタッチで止まった",
-  "tags": [
-   "電子工作",
-   "ESP32"
-  ]
- },
- {
-  "file": "posts/2026-10-28-esp32-music-player.md",
-  "title": "ESP32 単体の音楽プレイヤーを作る仕様を書いた",
   "tags": [
    "電子工作",
    "ESP32"
