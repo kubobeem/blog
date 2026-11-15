@@ -170,17 +170,35 @@ function renderTags(posts) {
   if (el.innerHTML.replace(/<!--.*?-->/g, "") !== html) el.innerHTML = html;
 }
 
-(async () => {
-  scheduleImageLoad(); // カウンタ等の画像は 3 秒後に読み込む
+// posts.json は遅延読み込み。一覧は index.html に事前描画済みなので、
+// 一覧表示のときは posts.json を取らない。記事・タグ表示のときだけ取る。
+let postsPromise = null;
+function getPosts() {
+  if (!postsPromise) {
+    postsPromise = fetch("/posts.json").then((r) => r.json()).then((items) =>
+      load(items).sort((a, b) => b.slug.localeCompare(a.slug))); // slug の先頭が日付なので新しい順になる
+  }
+  return postsPromise;
+}
+async function onRoute() {
   try {
-    const posts = load(await (await fetch("/posts.json")).json())
-      .sort((a, b) => b.slug.localeCompare(a.slug)); // slug の先頭が日付なので新しい順になる
+    const posts = await getPosts();
     renderTags(posts);
     view(posts);
-    addEventListener("hashchange", () => view(posts));
   } catch (e) {
     document.getElementById("posts").innerHTML = `<p class="error">記事を読み込めませんでした。<br>
       file:// で直接開いていないか確認してください（<code>python -m http.server</code> などで配信すると動きます）。</p>`;
     console.error(e);
   }
+}
+
+(async () => {
+  scheduleImageLoad(); // カウンタ等の画像は 3 秒後に読み込む
+  // 一覧表示（slugなし）なら posts.json は取らない。HTML に一覧が入ってるから。
+  if (!currentSlug()) {
+    addEventListener("hashchange", onRoute);
+    return;
+  }
+  await onRoute();
+  addEventListener("hashchange", onRoute);
 })();

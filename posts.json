@@ -16,21 +16,21 @@
   ]
  },
  {
-  "file": "posts/2026-11-06-google-ai-pro.md",
-  "title": "Google AI Proを2年0円で取る自動化を回してみた",
-  "tags": [
-   "LLM",
-   "Google",
-   "自動化"
-  ]
- },
- {
   "file": "posts/2026-11-08-ornith-wsl-fedora.md",
   "title": "WSLで20 tok/s、Fedoraで30 tok/s：Ornith 35Bを128kで回す話",
   "tags": [
    "LLM",
    "GPU",
    "Linux"
+  ]
+ },
+ {
+  "file": "posts/2026-11-06-google-ai-pro.md",
+  "title": "Google AI Proを2年0円で取る自動化を回してみた",
+  "tags": [
+   "LLM",
+   "Google",
+   "自動化"
   ]
  },
  {
