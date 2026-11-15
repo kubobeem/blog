@@ -8,7 +8,7 @@
  },
  {
   "file": "posts/2026-11-15-ornith-fedora-40tps.md",
-  "title": "Fedoraで40 tok/s：Ornith 35Bが69kでも40維持、128kも使える",
+  "title": "Fedoraで40 tok/s、69kで30 tok/s：Ornith 35Bを128kで回す話",
   "tags": [
    "LLM",
    "GPU",
