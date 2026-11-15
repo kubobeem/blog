@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>日々のメモ</title>
+<meta name="description" content="思ったことをだらだら書くだけのブログ。電子工作とプログラムと音楽。">
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="/style.css">
 </head>
@@ -18,8 +19,14 @@
 <div class="layout">
 
 <main id="posts">
-  <p class="loading">読み込み中...</p>
+<!-- LIST:START -->
+  <ul class="entries"><li><span class="date">固定</span><a href="#pin-about">このブログについて</a></li><li><span class="date">2026-11-15</span><a href="#2026-11-15-ornith-fedora-40tps">Fedoraで40 tok/s、69kで30 tok/s：Ornith 35Bを128kで回す話</a></li><li><span class="date">2026-11-08</span><a href="#2026-11-08-ornith-wsl-fedora">WSLで20 tok/s、Fedoraで30 tok/s：Ornith 35Bを128kで回す話</a></li><li><span class="date">2026-11-06</span><a href="#2026-11-06-google-ai-pro">Google AI Proを2年0円で取る自動化を回してみた</a></li><li><span class="date">2026-11-04</span><a href="#2026-11-04-opencode-interviewer">opencode これあると便利1選：曖昧な依頼を先に仕様にしてくれる interviewer</a></li><li><span class="date">2026-11-04</span><a href="#2026-11-04-hello">はじめました</a></li><li><span class="date">2026-11-04</span><a href="#2026-11-04-freetoken-wsl">WSL2 に 35B のローカル推論環境を足した</a></li><li><span class="date">2026-11-01</span><a href="#2026-11-01-ft-test">35B の MoE を 8GB の GPU で動かして、上限を確定させた</a></li><li><span class="date">2026-10-31</span><a href="#2026-10-31-web-unify">サイトを1リポジトリにまとめる計画</a></li><li><span class="date">2026-10-31</span><a href="#2026-10-31-kubokubo2">「You are an idiot」のパロディを自分のドメインで公開した</a></li><li><span class="date">2026-10-31</span><a href="#2026-10-31-homepage">1990年代風の個人ページを作った</a></li><li><span class="date">2026-10-30</span><a href="#2026-10-30-midi-burn">IR LED を1個焼いた</a></li><li><span class="date">2026-10-30</span><a href="#2026-10-30-esp32-music">ESP32 音楽プレイヤー、Bluetooth まで繋がってタッチで止まった</a></li><li><span class="date">2026-10-28</span><a href="#2026-10-28-esp32-music-player">ESP32 単体の音楽プレイヤーを作る仕様を書いた</a></li><li><span class="date">2026-10-28</span><a href="#2026-10-28-esp32-mjpeg">ESP32 で TFT に動画を出した（5.8fps）</a></li><li><span class="date">2026-10-27</span><a href="#2026-10-27-yt-tft-stream">YouTube の映像を ESP32 の画面に、音はブラウザで</a></li><li><span class="date">2026-10-26</span><a href="#2026-10-26-midi-sensor">フォトセンサ1個をベンチにかけた</a></li><li><span class="date">2026-10-26</span><a href="#2026-10-26-esp32-tft-test">ESP32 で 2.8インチ TFT を点灯させた</a></li><li><span class="date">2026-10-25</span><a href="#2026-10-25-pc-cleanup">Cドライブの掃除計画を立てた</a></li><li><span class="date">2026-10-25</span><a href="#2026-10-25-llama-bench">ローカル LLM 環境を b11870 に総入れ替えして、速度の上限を測った</a></li><li><span class="date">2026-10-25</span><a href="#2026-10-25-deskclock-nothing">時計アプリを Nothing 風に作り替えている</a></li><li><span class="date">2026-10-24</span><a href="#2026-10-24-midi-keyboard">フォトセンサ13個で光学式MIDIキーボードを作る</a></li><li><span class="date">2026-10-22</span><a href="#2026-10-22-gboard-lite">Gboard っぽい日本語キーボードを clean-room で作った</a></li><li><span class="date">2026-10-21</span><a href="#2026-10-21-opencode-theme">opencode のテーマを緑に作り直した</a></li><li><span class="date">2026-10-21</span><a href="#2026-10-21-nanochat-ja">日本語だけで学習した 49M のモデルを一晩で作った</a></li><li><span class="date">2026-10-20</span><a href="#2026-10-20-markdown-memo">記事の書き方メモ</a></li><li><span class="date">2026-10-18</span><a href="#2026-10-18-unkotune-desktop">Android の YouTube Music クライアントを Windows の exe にした</a></li><li><span class="date">2026-10-17</span><a href="#2026-10-17-ymm4-editor">YMM4 のプロジェクトを編集する単一 HTML のエディタを作った</a></li><li><span class="date">2026-10-07</span><a href="#2026-10-07-superfile">ファイル共有サービスを、公開できるところまで整えた</a></li><li><span class="date">2026-09-29</span><a href="#2026-09-29-aether">シェーダーパックを書いていて、コンパイルが通る嘘に負けた</a></li><li><span class="date">2026-09-26</span><a href="#2026-09-26-news-video">コマンド1個でニュースの縦型ショートを2本作るようにした</a></li><li><span class="date">2026-09-14</span><a href="#2026-09-14-x-bot-oss">X の bot 運用を OSS パッケージにまとめた</a></li><li><span class="date">2026-09-13</span><a href="#2026-09-13-xbot-auto">X の bot をタスクスケジューラで回し続けるようにした</a></li><li><span class="date">2026-09-12</span><a href="#2026-09-12-ascii-video-player">ターミナルで YouTube を ASCII 再生するツールに色を足した</a></li><li><span class="date">2026-08-31</span><a href="#2026-08-31-vibribbon">Vib-Ribbon 風のゲームを Cloudflare Pages に置いた</a></li><li><span class="date">2026-08-31</span><a href="#2026-08-31-superfile-speed">ファイル共有のアップロードが遅いので並列にした</a></li><li><span class="date">2026-08-30</span><a href="#2026-08-30-minimax-h3">8GB の GPU で動画生成を 176 秒から 55 秒にした</a></li><li><span class="date">2026-08-28</span><a href="#2026-08-28-shogun">WSL なしで「AI 部下10人」を Windows ネイティブに移植した</a></li></ul>
+<!-- LIST:END -->
 </main>
+<script>
+// 記事・タグ直リンク時は事前描画の一覧を消して読み込み表示にする（一覧のチラつき防止）
+(function(){var m=document.getElementById('posts');var h=location.hash.slice(1);var p=location.pathname.split('/').filter(Boolean);var s=h||(p.length?p[p.length-1]:'');if(s)m.innerHTML='<p class="loading">読み込み中...</p>';})();
+</script>
 
 <aside class="side">
 
@@ -46,10 +53,10 @@
   </ul>
 
   <h3>カテゴリ</h3>
-  <ul id="taglist"></ul>
+  <ul id="taglist"><!-- TAGS:START --><li><a href="#tag/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C">電子工作</a> (8)</li><li><a href="#tag/LLM">LLM</a> (7)</li><li><a href="#tag/Web">Web</a> (6)</li><li><a href="#tag/ESP32">ESP32</a> (5)</li><li><a href="#tag/MIDI">MIDI</a> (3)</li><li><a href="#tag/opencode">opencode</a> (3)</li><li><a href="#tag/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0">このブログ</a> (3)</li><li><a href="#tag/Android">Android</a> (2)</li><li><a href="#tag/Cloudflare">Cloudflare</a> (2)</li><li><a href="#tag/FreeToken">FreeToken</a> (2)</li><li><a href="#tag/GPU">GPU</a> (2)</li><li><a href="#tag/Linux">Linux</a> (2)</li><li><a href="#tag/X">X</a> (2)</li><li><a href="#tag/%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9">グラフィックス</a> (2)</li><li><a href="#tag/%E3%83%84%E3%83%BC%E3%83%AB">ツール</a> (2)</li><li><a href="#tag/%E5%8B%95%E7%94%BB">動画</a> (2)</li><li><a href="#tag/%E8%87%AA%E5%8B%95%E5%8C%96">自動化</a> (2)</li><li><a href="#tag/Google">Google</a> (1)</li><li><a href="#tag/PC">PC</a> (1)</li><li><a href="#tag/%E3%82%B2%E3%83%BC%E3%83%A0">ゲーム</a> (1)</li><li><a href="#tag/%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB">ターミナル</a> (1)</li><li><a href="#tag/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E3%82%A2%E3%83%97%E3%83%AA">デスクトップアプリ</a> (1)</li><li><a href="#tag/%E3%83%8D%E3%82%BF">ネタ</a> (1)</li><li><a href="#tag/%E3%83%9E%E3%83%AB%E3%83%81%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88">マルチエージェント</a> (1)</li><li><a href="#tag/%E3%83%AA%E3%83%90%E3%83%BC%E3%82%B9%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0">リバースエンジニアリング</a> (1)</li><li><a href="#tag/%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%ABLLM">ローカルLLM</a> (1)</li><li><a href="#tag/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92">機械学習</a> (1)</li><li><a href="#tag/%E7%94%9F%E6%88%90AI">生成AI</a> (1)</li><li><a href="#tag/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83">開発環境</a> (1)</li><li><a href="#tag/%E9%9F%B3%E6%A5%BD">音楽</a> (1)</li><!-- TAGS:END --></ul>
 
   <h3>アクセスカウンタ</h3>
-  <p class="counter"><img src="https://count.getloli.com/@kubobeem?name=kubobeem&amp;theme=random&amp;padding=7&amp;offset=0&amp;align=top&amp;scale=1&amp;pixelated=1&amp;darkmode=auto" alt="アクセスカウンタ"></p>
+  <p class="counter"><img src="https://count.getloli.com/@kubobeem?name=kubobeem&amp;theme=random&amp;padding=7&amp;offset=0&amp;align=top&amp;scale=1&amp;pixelated=1&amp;darkmode=auto" alt="アクセスカウンタ" loading="lazy" decoding="async"></p>
 
   <h3>リンク</h3>
   <ul>
@@ -67,7 +74,6 @@
 </footer>
 
 </div>
-<script src="/vendor/marked.min.js"></script>
 <script src="/app.js"></script>
 </body>
 </html>
