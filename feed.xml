@@ -60,13 +60,6 @@
     <description><![CDATA[<p>手元の環境で 120k コンテキスト・40 t/s を目標に、35B MoE のチューニングをやった。結論から書くと、目標には届かず、26〜27 t/s がこのハードの上限だと分かった。</p>]]></description>
   </item>
   <item>
-    <title>サイトを1リポジトリにまとめる計画</title>
-    <link>https://kubobeem.tech/#2026-10-31-web-unify</link>
-    <guid isPermaLink="false">https://kubobeem.tech/#2026-10-31-web-unify</guid>
-    <pubDate>Sat, 31 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p>サイトが増えて散らかってきた。GitHub Pages と Cloudflare Pages が混在していて、どのドメインがどこを向いているのか、自分でも把握できていない状態。</p>]]></description>
-  </item>
-  <item>
     <title>「You are an idiot」のパロディを自分のドメインで公開した</title>
     <link>https://kubobeem.tech/#2026-10-31-kubokubo2</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-31-kubokubo2</guid>
@@ -93,13 +86,6 @@
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-30-esp32-music</guid>
     <pubDate>Fri, 30 Oct 2026 00:00:00 +0900</pubDate>
     <description><![CDATA[<p>SD の音楽を Bluetooth スピーカーに飛ばすプレイヤーを作っている。画面とタッチで操作できて、サブ画面にスペクトラムが出る構成。動くところまで来たが、タッチで止まっている。</p>]]></description>
-  </item>
-  <item>
-    <title>ESP32 単体の音楽プレイヤーを作る仕様を書いた</title>
-    <link>https://kubobeem.tech/#2026-10-28-esp32-music-player</link>
-    <guid isPermaLink="false">https://kubobeem.tech/#2026-10-28-esp32-music-player</guid>
-    <pubDate>Wed, 28 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p>画面と SD カードと Bluetooth が繋がったので、次はこれ単体で音楽を鳴らしたい。仕様を先に書いた。まだ実装はしていない。</p>]]></description>
   </item>
   <item>
     <title>ESP32 で TFT に動画を出した（5.8fps）</title>
