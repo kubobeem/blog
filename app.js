@@ -31,6 +31,34 @@ const load = (items) => items.map((it) => {
 
 const bodyCache = new Map();
 
+// 画像は後回し: JS で 3 秒後に読み込む（50kb/s でも文字が先に出る）。
+// <img data-src="..."> になっている画像だけが対象。src が付いた画像は即読み込みのまま。
+let imgTimer = null;
+function loadDeferredImages() {
+  imgTimer = null;
+  document.querySelectorAll("img[data-src]").forEach((img) => {
+    img.src = img.dataset.src;
+    img.removeAttribute("data-src");
+  });
+}
+function scheduleImageLoad() {
+  if (imgTimer) clearTimeout(imgTimer);
+  imgTimer = setTimeout(loadDeferredImages, 3000);
+}
+
+// 記事本文の画像も data-src 化する。寸法が分かっている画像は width/height を付けてずれ防止。
+// 新しい画像を posts/ に足したら、ここに「パス: [幅, 高さ]」を追加すること。
+const KNOWN_IMG_SIZE = {
+  "/images/2026-11-06-ai-pro-accounts.jpg": [956, 509],
+};
+function deferArticleImages(html) {
+  return html.replace(/<img\s+src="([^"]+)"([^>]*)>/g, (m, src, rest) => {
+    const size = KNOWN_IMG_SIZE[src];
+    const dims = size ? ` width="${size[0]}" height="${size[1]}"` : "";
+    return `<img data-src="${src}"${dims} loading="lazy" decoding="async"${rest}>`;
+  });
+}
+
 // marked は記事本文を開くときだけ遅延読み込みする。
 // 一覧表示では 12KB の marked.min.js を取らない。
 let markedReady = null;
@@ -94,15 +122,22 @@ ${back}`;
     if (!bodyCache.has(post.slug)) main.innerHTML = `<p class="loading">読み込み中…</p>`;
     const body = await getBody(post);
     if (currentSlug() !== slug) return; // 待っている間に別のページへ移った
-    await loadMarked();
+    let parsed;
+    try {
+      await loadMarked();
+      parsed = deferArticleImages(marked.parse(body));
+    } catch (e) {
+      parsed = `<p>${esc(body)}</p>`; // marked が読めないときは素のテキストで出す
+    }
     main.innerHTML = `<article>
   <h2>${esc(post.title)}</h2>
   <p class="date">${esc(post.date || "固定投稿")}</p>
-  ${marked.parse(body)}
+  ${parsed}
   ${post.tags.length ? `<p class="tags">タグ: ${post.tags.map(tagLink).join(" ")}</p>` : ""}
   ${related.length ? `<p class="related">関連: ${related.map((x) => `<a href="#${esc(x.p.slug)}">${esc(x.p.title)}</a>`).join(" / ")}</p>` : ""}
 </article>
 ${back}`;
+    scheduleImageLoad();
   } else if (slug) {
     const html = `<div class="notfound">
   <h2>404</h2>
@@ -134,6 +169,7 @@ function renderTags(posts) {
 }
 
 (async () => {
+  scheduleImageLoad(); // カウンタ等の画像は 3 秒後に読み込む
   try {
     const posts = load(await (await fetch("/posts.json")).json())
       .sort((a, b) => b.slug.localeCompare(a.slug)); // slug の先頭が日付なので新しい順になる
