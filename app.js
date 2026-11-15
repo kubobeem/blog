@@ -33,10 +33,20 @@ const bodyCache = new Map();
 
 // 画像は後回し: JS で 3 秒後に読み込む（50kb/s でも文字が先に出る）。
 // <img data-src="..."> になっている画像だけが対象。src が付いた画像は即読み込みのまま。
+// カウンタだけは 10 秒後に読み込む（40KB あって重いので、ページが落ち着いてから）。
 let imgTimer = null;
+let counterTimer = null;
 function loadDeferredImages() {
   imgTimer = null;
   document.querySelectorAll("img[data-src]").forEach((img) => {
+    if (img.closest(".counter")) return; // カウンタは別タイマーで 10 秒後に
+    img.src = img.dataset.src;
+    img.removeAttribute("data-src");
+  });
+}
+function loadCounter() {
+  counterTimer = null;
+  document.querySelectorAll(".counter img[data-src]").forEach((img) => {
     img.src = img.dataset.src;
     img.removeAttribute("data-src");
   });
@@ -44,6 +54,8 @@ function loadDeferredImages() {
 function scheduleImageLoad() {
   if (imgTimer) clearTimeout(imgTimer);
   imgTimer = setTimeout(loadDeferredImages, 3000);
+  if (counterTimer) clearTimeout(counterTimer);
+  counterTimer = setTimeout(loadCounter, 10000);
 }
 
 // 記事本文の画像も data-src 化する。寸法が分かっている画像は width/height を付けてずれ防止。
