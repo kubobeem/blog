@@ -37,7 +37,7 @@ for it in ordered:
     s = slug_of(it)
     m = DATE_RE.match(s)
     date = m.group(1) if m else "固定"
-    entries.append(f'<li><span class="date">{date}</span><a href="#{esc(s)}">{esc(it["title"])}</a></li>')
+    entries.append(f'<li style="--i:{len(entries)}"><span class="date">{date}</span><a href="#{esc(s)}">{esc(it["title"])}</a></li>')
 list_html = '<ul class="entries">' + "".join(entries) + "</ul>"
 
 counts = Counter()
@@ -48,8 +48,8 @@ def tag_href(t):
     return urlquote(t, safe="-_.!~*'()")
 
 tag_html = "".join(
-    f'<li><a href="#tag/{tag_href(t)}">{esc(t)}</a> ({n})</li>'
-    for t, n in sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
+    f'<li style="--i:{i}"><a href="#tag/{tag_href(t)}">{esc(t)}</a> ({n})</li>'
+    for i, (t, n) in enumerate(sorted(counts.items(), key=lambda kv: (-kv[1], kv[0])))
 )
 
 page = open(INDEX, encoding="utf-8").read()
