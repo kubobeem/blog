@@ -91,7 +91,7 @@ function currentSlug() {
 }
 
 const tagLink = (t) => `<a href="#tag/${encodeURIComponent(t)}">${esc(t)}</a>`;
-const entry = (p) => `<li><span class="date">${esc(p.date || "固定")}</span><a href="#${esc(p.slug)}">${esc(p.title)}</a></li>`;
+const entry = (p, i) => `<li style="--i:${i}"><span class="date">${esc(p.date || "固定")}</span><a href="#${esc(p.slug)}">${esc(p.title)}</a></li>`;
 const list = (posts) => `<ul class="entries">${posts.map(entry).join("")}</ul>`;
 const back = `<p class="back"><a href="/">&laquo; 記事一覧へ戻る</a></p>`;
 
@@ -137,6 +137,8 @@ ${back}`;
   ${related.length ? `<p class="related">関連: ${related.map((x) => `<a href="#${esc(x.p.slug)}">${esc(x.p.title)}</a>`).join(" / ")}</p>` : ""}
 </article>
 ${back}`;
+    // 記事の中身も上からだんだん出す
+    [...main.querySelectorAll("article > *")].forEach((el, i) => el.style.setProperty("--i", i));
     scheduleImageLoad();
   } else if (slug) {
     const html = `<div class="notfound">
@@ -162,7 +164,7 @@ function renderTags(posts) {
   const el = document.getElementById("taglist");
   const html = [...counts]
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-    .map(([t, n]) => `<li>${tagLink(t)} (${n})</li>`)
+    .map(([t, n], i) => `<li style="--i:${i}">${tagLink(t)} (${n})</li>`)
     .join("");
   // 事前描画済み（コメントを除いて同じ）なら描き直さない
   if (el.innerHTML.replace(/<!--.*?-->/g, "") !== html) el.innerHTML = html;
