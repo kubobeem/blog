@@ -308,6 +308,24 @@ th {
   background: var(--th);
   font-weight: normal;
 }
+/* 上からだんだん出る（ちょちょちょ）: 一覧・タグ・記事の中身を順番に。
+   --i は build.py / app.js が li ごとに付ける番号。opacity と transform だけなのでずれは出ない。 */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  ul.entries li,
+  #taglist li {
+    animation: rise .45s both;
+    animation-delay: calc(min(var(--i, 0), 24) * 45ms);
+  }
+  article > * {
+    animation: rise .45s both;
+    animation-delay: calc(min(var(--i, 0), 20) * 60ms);
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
