@@ -30,6 +30,21 @@ const load = (items) => items.map((it) => {
 });
 
 const bodyCache = new Map();
+
+// marked は記事本文を開くときだけ遅延読み込みする。
+// 一覧表示では 12KB の marked.min.js を取らない。
+let markedReady = null;
+function loadMarked() {
+  if (window.marked) return Promise.resolve();
+  if (!markedReady) markedReady = new Promise((res, rej) => {
+    const s = document.createElement("script");
+    s.src = "/vendor/marked.min.js";
+    s.onload = res;
+    s.onerror = rej;
+    document.head.appendChild(s);
+  });
+  return markedReady;
+}
 async function getBody(post) {
   if (!bodyCache.has(post.slug)) {
     const md = await (await fetch("/" + post.file)).text();
@@ -63,9 +78,10 @@ async function view(posts) {
   if (slug.startsWith("tag/")) {
     const name = slug.slice(4);
     const hits = sorted.filter((p) => p.tags.includes(name));
-    main.innerHTML = `<h2>タグ: ${esc(name)}</h2>
+    const html = `<h2>タグ: ${esc(name)}</h2>
 ${hits.length ? list(hits) : `<p>このタグの記事はありません。</p>`}
 ${back}`;
+    if (main.innerHTML !== html) main.innerHTML = html;
     document.title = `${name} - 日々のメモ`;
   } else if (post) {
     // 共通タグの多い順に最大3件
@@ -78,6 +94,7 @@ ${back}`;
     if (!bodyCache.has(post.slug)) main.innerHTML = `<p class="loading">読み込み中…</p>`;
     const body = await getBody(post);
     if (currentSlug() !== slug) return; // 待っている間に別のページへ移った
+    await loadMarked();
     main.innerHTML = `<article>
   <h2>${esc(post.title)}</h2>
   <p class="date">${esc(post.date || "固定投稿")}</p>
@@ -87,15 +104,19 @@ ${back}`;
 </article>
 ${back}`;
   } else if (slug) {
-    main.innerHTML = `<div class="notfound">
+    const html = `<div class="notfound">
   <h2>404</h2>
   <p>ページが見つかりません。</p>
   <p><code>${esc(slug)}</code> という記事は存在しません。URL を打ち間違えたか、記事を消したか、そのどちらかです。</p>
   <p><a href="/">&laquo; 記事一覧へ戻る</a></p>
 </div>`;
+    if (main.innerHTML !== html) main.innerHTML = html;
     document.title = "404 - 日々のメモ";
   } else {
-    main.innerHTML = list(sorted);
+    // 一覧は build.py が index.html に事前描画済み。同じ内容なら描き直さない（チラつき・ずれ防止）
+    const html = list(sorted);
+    const cur = main.querySelector("ul.entries");
+    if (!cur || cur.outerHTML !== html) main.innerHTML = html;
     document.title = "日々のメモ";
   }
 }
@@ -103,10 +124,13 @@ ${back}`;
 function renderTags(posts) {
   const counts = new Map();
   posts.forEach((p) => p.tags.forEach((t) => counts.set(t, (counts.get(t) || 0) + 1)));
-  document.getElementById("taglist").innerHTML = [...counts]
+  const el = document.getElementById("taglist");
+  const html = [...counts]
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
     .map(([t, n]) => `<li>${tagLink(t)} (${n})</li>`)
     .join("");
+  // 事前描画済み（コメントを除いて同じ）なら描き直さない
+  if (el.innerHTML.replace(/<!--.*?-->/g, "") !== html) el.innerHTML = html;
 }
 
 (async () => {
