@@ -5,7 +5,8 @@ markdown ファイルを置くだけの個人ブログ。フレームワーク�
 ## 記事を追加する
 
 1. `posts/2026-11-05-nanika.md` を作る（1行目に `# タイトル`）
-2. `posts.json` に `"posts/2026-11-05-nanika.md"` を足す（順番は自由・表示は日付の新しい順）
+2. `python build.py` を実行する（`posts.json` 再生成＋一覧・タグを `index.html` に事前描画）
+3. `git push` する（push すると自動で公開に反映される。2026-11-15 に確認済み。`npx wrangler deploy` は不要）
 
 ## ローカルで見る
 
@@ -38,11 +39,9 @@ python -m http.server 8000
 ```powershell
 cd D:\code\blogs
 git add -A; git commit -m "Add post"; git push
-$env:CLOUDFLARE_ACCOUNT_ID="c901656c50e254e47a7645513c971359"
-npx wrangler deploy
 ```
 
-アカウントが2つあるので `CLOUDFLARE_ACCOUNT_ID` の指定が必要（kuboes 側）。`wrangler.jsonc` が `assets.directory: "."` でこのフォルダをそのまま配信する（`.assetsignore` で `.git` や README は除外）。
+`main` への push で自動デプロイされる（2026-11-15 に確認済み）。
 
 ## URL
 
