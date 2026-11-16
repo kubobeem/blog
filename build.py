@@ -126,8 +126,9 @@ for it in ordered:
     desc_text, img_src = excerpt_and_image(md_text)
     link = f"https://kubobeem.tech/#{s}"
     desc_html = ""
-    if img_src:
-        desc_html += f'<p><img src="{esc(abs_url(img_src))}" alt=""></p>'
+    # 画像がない記事は og:image を入れる（RSSで画像が表示されるように）
+    img = img_src if img_src else OG_IMAGE
+    desc_html += f'<p><img src="{esc(abs_url(img))}" alt=""></p>'
     if desc_text:
         desc_html += f"<p>{esc(desc_text)}</p>"
     if not desc_html:
