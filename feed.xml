@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
   <title>日々のメモ</title>
   <link>https://kubobeem.tech/</link>
   <description>思ったことをだらだら書くだけのブログ。電子工作とプログラムと音楽。</description>
   <language>ja</language>
+  <lastBuildDate>Wed, 25 Nov 2026 00:31:06 +0900</lastBuildDate>
+  <atom:link href="https://kubobeem.tech/feed.xml" rel="self" type="application/rss+xml" />
   <image>
-    <url>https://kuboes.ninja/og.png</url>
+    <url>https://kubobeem.tech/images/og.png</url>
     <title>日々のメモ</title>
     <link>https://kubobeem.tech/</link>
   </image>
@@ -15,245 +17,385 @@
     <link>https://kubobeem.tech/#2026-11-15-ornith-fedora-40tps</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-11-15-ornith-fedora-40tps</guid>
     <pubDate>Sun, 15 Nov 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>WSLで30 tok/s、Fedoraで40 tok/s出た。69kコンテキストだと30 tok/sになる。128kも使える。</p>]]></description>
+    <category>LLM</category>
+    <description>WSLで30 tok/s、Fedoraで40 tok/s出た。69kコンテキストだと30 tok/sになる。128kも使える。</description>
+    <content:encoded><![CDATA[<p>WSLで30 tok/s、Fedoraで40 tok/s出た。69kコンテキストだと30 tok/sになる。128kも使える。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>WSLで20 tok/s、Fedoraで30 tok/s：Ornith 35Bを128kで回す話</title>
     <link>https://kubobeem.tech/#2026-11-08-ornith-wsl-fedora</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-11-08-ornith-wsl-fedora</guid>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>Ornith 35B A3Bを128kコンテキストで回してる。手元の環境はRTX 4060 8GB＋DDR4。WSLだと20 tok/sくらいで、Fedoraに移したら30 tok/sになった。最初は40いくかと思ったけど、測ったら30だった。</p>]]></description>
+    <category>LLM</category>
+    <description>Ornith 35B A3Bを128kコンテキストで回してる。手元の環境はRTX 4060 8GB＋DDR4。WSLだと20 tok/sくらいで、Fedoraに移したら30 tok/sになった。最初は40いくかと思ったけど、測ったら30だった。</description>
+    <content:encoded><![CDATA[<p>Ornith 35B A3Bを128kコンテキストで回してる。手元の環境はRTX 4060 8GB＋DDR4。WSLだと20 tok/sくらいで、Fedoraに移したら30 tok/sになった。最初は40いくかと思ったけど、測ったら30だった。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>Google AI Proを2年0円で取る自動化を回してみた</title>
     <link>https://kubobeem.tech/#2026-11-06-google-ai-pro</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-11-06-google-ai-pro</guid>
     <pubDate>Fri, 06 Nov 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kubobeem.tech/images/2026-11-06-ai-pro-accounts.jpg" alt=""></p><p>Xで見かけた「Google AI Pro（5TB）を2年0円で取る自動化」を、余り垢で回してみた話。2026-11-06 17:44時点でStep 4まで来た。まだ完了じゃない。Step 5の自動解約と検証が残ってる。</p>]]></description>
+    <category>LLM</category>
+    <description>Xで見かけた「Google AI Pro（5TB）を2年0円で取る自動化」を、余り垢で回してみた話。11/6に取って、11/11でx4全部終了。残ったのはStep 2に付いたYouTube Premiumの1ヶ月だけ。</description>
+    <content:encoded><![CDATA[<p>Xで見かけた「Google AI Pro（5TB）を2年0円で取る自動化」を、余り垢で回してみた話。11/6に取って、11/11でx4全部終了。残ったのはStep 2に付いたYouTube Premiumの1ヶ月だけ。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/2026-11-06-ai-pro-accounts.jpg" />
+    <media:content url="https://kubobeem.tech/images/2026-11-06-ai-pro-accounts.jpg" type="image/jpeg" medium="image" />
   </item>
   <item>
     <title>opencode これあると便利1選：曖昧な依頼を先に仕様にしてくれる interviewer</title>
     <link>https://kubobeem.tech/#2026-11-04-opencode-interviewer</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-11-04-opencode-interviewer</guid>
     <pubDate>Wed, 04 Nov 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>この記事は「opencodeこれあると便利1選 /interviewer みたいな感じで」という依頼から始まった。要するに「interviewer が便利だった話を書いて」としか言っていない。何を書くかは何も決まっていない状態だった。</p>]]></description>
+    <category>opencode</category>
+    <description>この記事は「opencodeこれあると便利1選 /interviewer みたいな感じで」という依頼から始まった。要するに「interviewer が便利だった話を書いて」としか言っていない。何を書くかは何も決まっていない状態だった。</description>
+    <content:encoded><![CDATA[<p>この記事は「opencodeこれあると便利1選 /interviewer みたいな感じで」という依頼から始まった。要するに「interviewer が便利だった話を書いて」としか言っていない。何を書くかは何も決まっていない状態だった。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>はじめました</title>
     <link>https://kubobeem.tech/#2026-11-04-hello</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-11-04-hello</guid>
     <pubDate>Wed, 04 Nov 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>とりあえずブログを作った。前から作ろう作ろうと思ってて、やっと重い腰を上げた感じ。</p>]]></description>
+    <category>このブログ</category>
+    <description>とりあえずブログを作った。前から作ろう作ろうと思ってて、やっと重い腰を上げた感じ。</description>
+    <content:encoded><![CDATA[<p>とりあえずブログを作った。前から作ろう作ろうと思ってて、やっと重い腰を上げた感じ。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>WSL2 に 35B のローカル推論環境を足した</title>
     <link>https://kubobeem.tech/#2026-11-04-freetoken-wsl</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-11-04-freetoken-wsl</guid>
     <pubDate>Wed, 04 Nov 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>手元の GPU でそこそこ賢いモデルを回したくて、FreeToken の fork（atomicmilkshake 版）を WSL2 に入れた。</p>]]></description>
+    <category>LLM</category>
+    <description>手元の GPU でそこそこ賢いモデルを回したくて、FreeToken の fork（atomicmilkshake 版）を WSL2 に入れた。</description>
+    <content:encoded><![CDATA[<p>手元の GPU でそこそこ賢いモデルを回したくて、FreeToken の fork（atomicmilkshake 版）を WSL2 に入れた。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>35B の MoE を 8GB の GPU で動かして、上限を確定させた</title>
     <link>https://kubobeem.tech/#2026-11-01-ft-test</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-11-01-ft-test</guid>
     <pubDate>Sun, 01 Nov 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>手元の環境で 120k コンテキスト・40 t/s を目標に、35B MoE のチューニングをやった。結論から書くと、目標には届かず、26〜27 t/s がこのハードの上限だと分かった。</p>]]></description>
+    <category>LLM</category>
+    <description>手元の環境で 120k コンテキスト・40 t/s を目標に、35B MoE のチューニングをやった。結論から書くと、目標には届かず、26〜27 t/s がこのハードの上限だと分かった。</description>
+    <content:encoded><![CDATA[<p>手元の環境で 120k コンテキスト・40 t/s を目標に、35B MoE のチューニングをやった。結論から書くと、目標には届かず、26〜27 t/s がこのハードの上限だと分かった。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>「You are an idiot」のパロディを自分のドメインで公開した</title>
     <link>https://kubobeem.tech/#2026-10-31-kubokubo2</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-31-kubokubo2</guid>
     <pubDate>Sat, 31 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>2000年代の定番いたずらページ「You are an idiot」のパロディを作って Cloudflare Pages に出した。全画面の動画、止まらない音楽、跳ね回るウィンドウ、勝手に増えるポップアップ。要するに迷惑なだけのサイト。</p>]]></description>
+    <category>ネタ</category>
+    <description>2000年代の定番いたずらページ「You are an idiot」のパロディを作って Cloudflare Pages に出した。全画面の動画、止まらない音楽、跳ね回るウィンドウ、勝手に増えるポップアップ。要するに迷惑なだけのサイト。</description>
+    <content:encoded><![CDATA[<p>2000年代の定番いたずらページ「You are an idiot」のパロディを作って Cloudflare Pages に出した。全画面の動画、止まらない音楽、跳ね回るウィンドウ、勝手に増えるポップアップ。要するに迷惑なだけのサイト。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>1990年代風の個人ページを作った</title>
     <link>https://kubobeem.tech/#2026-10-31-homepage</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-31-homepage</guid>
     <pubDate>Sat, 31 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>自分のサイトがプレースホルダーのまま数年放置されていたので、開き直って作り直した。狙いは 90 年代のインターネット。白い背景に細い枠、ベベルボタン、点滅する文字。</p>]]></description>
+    <category>Web</category>
+    <description>自分のサイトがプレースホルダーのまま数年放置されていたので、開き直って作り直した。狙いは 90 年代のインターネット。白い背景に細い枠、ベベルボタン、点滅する文字。</description>
+    <content:encoded><![CDATA[<p>自分のサイトがプレースホルダーのまま数年放置されていたので、開き直って作り直した。狙いは 90 年代のインターネット。白い背景に細い枠、ベベルボタン、点滅する文字。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>IR LED を1個焼いた</title>
     <link>https://kubobeem.tech/#2026-10-30-midi-burn</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-30-midi-burn</guid>
     <pubDate>Fri, 30 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>フォトセンサの検知距離を伸ばすために、LED の抵抗を 1kΩ から 500Ω（1kΩ 2本の並列）に変えようとしていた。その作業中に、13個ある赤外線 LED のうち1個を過電流で焼損した。</p>]]></description>
+    <category>電子工作</category>
+    <description>フォトセンサの検知距離を伸ばすために、LED の抵抗を 1kΩ から 500Ω（1kΩ 2本の並列）に変えようとしていた。その作業中に、13個ある赤外線 LED のうち1個を過電流で焼損した。</description>
+    <content:encoded><![CDATA[<p>フォトセンサの検知距離を伸ばすために、LED の抵抗を 1kΩ から 500Ω（1kΩ 2本の並列）に変えようとしていた。その作業中に、13個ある赤外線 LED のうち1個を過電流で焼損した。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>ESP32 音楽プレイヤー、Bluetooth まで繋がってタッチで止まった</title>
     <link>https://kubobeem.tech/#2026-10-30-esp32-music</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-30-esp32-music</guid>
     <pubDate>Fri, 30 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>SD の音楽を Bluetooth スピーカーに飛ばすプレイヤーを作っている。画面とタッチで操作できて、サブ画面にスペクトラムが出る構成。動くところまで来たが、タッチで止まっている。</p>]]></description>
+    <category>電子工作</category>
+    <description>SD の音楽を Bluetooth スピーカーに飛ばすプレイヤーを作っている。画面とタッチで操作できて、サブ画面にスペクトラムが出る構成。動くところまで来たが、タッチで止まっている。</description>
+    <content:encoded><![CDATA[<p>SD の音楽を Bluetooth スピーカーに飛ばすプレイヤーを作っている。画面とタッチで操作できて、サブ画面にスペクトラムが出る構成。動くところまで来たが、タッチで止まっている。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>ESP32 で TFT に動画を出した（5.8fps）</title>
     <link>https://kubobeem.tech/#2026-10-28-esp32-mjpeg</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-28-esp32-mjpeg</guid>
     <pubDate>Wed, 28 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>MP4 を小さい画面で再生したかった。ESP32 単体でデコードするのは無理なので、PC にデコードさせて JPEG にして流し込む方式にした。</p>]]></description>
+    <category>電子工作</category>
+    <description>MP4 を小さい画面で再生したかった。ESP32 単体でデコードするのは無理なので、PC にデコードさせて JPEG にして流し込む方式にした。</description>
+    <content:encoded><![CDATA[<p>MP4 を小さい画面で再生したかった。ESP32 単体でデコードするのは無理なので、PC にデコードさせて JPEG にして流し込む方式にした。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>YouTube の映像を ESP32 の画面に、音はブラウザで</title>
     <link>https://kubobeem.tech/#2026-10-27-yt-tft-stream</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-27-yt-tft-stream</guid>
     <pubDate>Tue, 27 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>前の記事で作った MJPEG プレーヤー（PC が JPEG にしてシリアルで送るやつ）は 5fps しか出なかった。映画は無理だが、音楽を聴きながら小さい画面で映像が流れるくらいなら欲しい。というわけで、音だけブラウザに任せる構成にした。</p>]]></description>
+    <category>電子工作</category>
+    <description>前の記事で作った MJPEG プレーヤー（PC が JPEG にしてシリアルで送るやつ）は 5fps しか出なかった。映画は無理だが、音楽を聴きながら小さい画面で映像が流れるくらいなら欲しい。というわけで、音だけブラウザに任せる構成にした。</description>
+    <content:encoded><![CDATA[<p>前の記事で作った MJPEG プレーヤー（PC が JPEG にしてシリアルで送るやつ）は 5fps しか出なかった。映画は無理だが、音楽を聴きながら小さい画面で映像が流れるくらいなら欲しい。というわけで、音だけブラウザに任せる構成にした。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>フォトセンサ1個をベンチにかけた</title>
     <link>https://kubobeem.tech/#2026-10-26-midi-sensor</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-26-midi-sensor</guid>
     <pubDate>Mon, 26 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>13個届く前に、1個だけで動くのか確かめた。光学式は「光が返ってくるか」で押下を判定するので、まずは紙を近づけたり離したりして MIDI がどう出るか。</p>]]></description>
+    <category>電子工作</category>
+    <description>13個届く前に、1個だけで動くのか確かめた。光学式は「光が返ってくるか」で押下を判定するので、まずは紙を近づけたり離したりして MIDI がどう出るか。</description>
+    <content:encoded><![CDATA[<p>13個届く前に、1個だけで動くのか確かめた。光学式は「光が返ってくるか」で押下を判定するので、まずは紙を近づけたり離したりして MIDI がどう出るか。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>ESP32 で 2.8インチ TFT を点灯させた</title>
     <link>https://kubobeem.tech/#2026-10-26-esp32-tft-test</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-26-esp32-tft-test</guid>
     <pubDate>Mon, 26 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>Amazon で買った 2.8インチ 240x320 の TFT がずっと箱に入ったままだったので、まず点灯だけ試した。コントローラの刻印が読めないので、定番の ILI9341 と決め打ち。</p>]]></description>
+    <category>電子工作</category>
+    <description>Amazon で買った 2.8インチ 240x320 の TFT がずっと箱に入ったままだったので、まず点灯だけ試した。コントローラの刻印が読めないので、定番の ILI9341 と決め打ち。</description>
+    <content:encoded><![CDATA[<p>Amazon で買った 2.8インチ 240x320 の TFT がずっと箱に入ったままだったので、まず点灯だけ試した。コントローラの刻印が読めないので、定番の ILI9341 と決め打ち。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>Cドライブの掃除計画を立てた</title>
     <link>https://kubobeem.tech/#2026-10-25-pc-cleanup</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-25-pc-cleanup</guid>
     <pubDate>Sun, 25 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>PC がなんとなく重いので、不要ファイルの洗い出しをした。まず現状把握から。</p>]]></description>
+    <category>PC</category>
+    <description>PC がなんとなく重いので、不要ファイルの洗い出しをした。まず現状把握から。</description>
+    <content:encoded><![CDATA[<p>PC がなんとなく重いので、不要ファイルの洗い出しをした。まず現状把握から。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>ローカル LLM 環境を b11870 に総入れ替えして、速度の上限を測った</title>
     <link>https://kubobeem.tech/#2026-10-25-llama-bench</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-25-llama-bench</guid>
     <pubDate>Sun, 25 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>~/bin の llama-server / llama-cli / llama-bench を b11870（v0.7.0 / commit 74bca3950）に入れ替えた。ついでに「なんか遅くなった」の原因を実測で切り分けた。</p>]]></description>
+    <category>LLM</category>
+    <description>~/bin の llama-server / llama-cli / llama-bench を b11870（v0.7.0 / commit 74bca3950）に入れ替えた。ついでに「なんか遅くなった」の原因を実測で切り分けた。</description>
+    <content:encoded><![CDATA[<p>~/bin の llama-server / llama-cli / llama-bench を b11870（v0.7.0 / commit 74bca3950）に入れ替えた。ついでに「なんか遅くなった」の原因を実測で切り分けた。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>時計アプリを Nothing 風に作り替えている</title>
     <link>https://kubobeem.tech/#2026-10-25-deskclock-nothing</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-25-deskclock-nothing</guid>
     <pubDate>Sun, 25 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>AOSP 系の時計アプリ（FOSS の Clock の fork）を、Nothing OS の見た目に変える作業。v1 はほぼ実装して、v2 は「Material すぎる」ところを全部剥がす方針を決めたところ。</p>]]></description>
+    <category>Android</category>
+    <description>AOSP 系の時計アプリ（FOSS の Clock の fork）を、Nothing OS の見た目に変える作業。v1 はほぼ実装して、v2 は「Material すぎる」ところを全部剥がす方針を決めたところ。</description>
+    <content:encoded><![CDATA[<p>AOSP 系の時計アプリ（FOSS の Clock の fork）を、Nothing OS の見た目に変える作業。v1 はほぼ実装して、v2 は「Material すぎる」ところを全部剥がす方針を決めたところ。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>フォトセンサ13個で光学式MIDIキーボードを作る</title>
     <link>https://kubobeem.tech/#2026-10-24-midi-keyboard</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-24-midi-keyboard</guid>
     <pubDate>Sat, 24 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>ピアノを弾きたいわけではなく、キーボードの機構そのものが面白そうだったので作り始めた。1オクターブ分、光学式でいく。</p>]]></description>
+    <category>電子工作</category>
+    <description>ピアノを弾きたいわけではなく、キーボードの機構そのものが面白そうだったので作り始めた。1オクターブ分、光学式でいく。</description>
+    <content:encoded><![CDATA[<p>ピアノを弾きたいわけではなく、キーボードの機構そのものが面白そうだったので作り始めた。1オクターブ分、光学式でいく。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>Gboard っぽい日本語キーボードを clean-room で作った</title>
     <link>https://kubobeem.tech/#2026-10-22-gboard-lite</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-22-gboard-lite</guid>
     <pubDate>Thu, 22 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>Gboard の日本語入力が好きだけど、中身がどうなっているか分からないのがずっともやもやしていた。同じ体験を、コードも辞書もアセットも見ずに作り直した。ライセンスは MIT。</p>]]></description>
+    <category>Android</category>
+    <description>Gboard の日本語入力が好きだけど、中身がどうなっているか分からないのがずっともやもやしていた。同じ体験を、コードも辞書もアセットも見ずに作り直した。ライセンスは MIT。</description>
+    <content:encoded><![CDATA[<p>Gboard の日本語入力が好きだけど、中身がどうなっているか分からないのがずっともやもやしていた。同じ体験を、コードも辞書もアセットも見ずに作り直した。ライセンスは MIT。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>opencode のテーマを緑に作り直した</title>
     <link>https://kubobeem.tech/#2026-10-21-opencode-theme</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-21-opencode-theme</guid>
     <pubDate>Wed, 21 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>opencode の見た目が飽きてきたので、標準の claude-transparent をコピーして派生テーマを作った。名前は投げやりに claude-transparent-2。</p>]]></description>
+    <category>opencode</category>
+    <description>opencode の見た目が飽きてきたので、標準の claude-transparent をコピーして派生テーマを作った。名前は投げやりに claude-transparent-2。</description>
+    <content:encoded><![CDATA[<p>opencode の見た目が飽きてきたので、標準の claude-transparent をコピーして派生テーマを作った。名前は投げやりに claude-transparent-2。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>日本語だけで学習した 49M のモデルを一晩で作った</title>
     <link>https://kubobeem.tech/#2026-10-21-nanochat-ja</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-21-nanochat-ja</guid>
     <pubDate>Wed, 21 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>nanochat を fork して、日本語に寄せた小型モデルを作った。名前は nano-ja。合成データ作りから、tokenizer、pretrain、SFT、GGUF 化、WebGPU のデモ公開まで一通り通した。</p>]]></description>
+    <category>LLM</category>
+    <description>nanochat を fork して、日本語に寄せた小型モデルを作った。名前は nano-ja。合成データ作りから、tokenizer、pretrain、SFT、GGUF 化、WebGPU のデモ公開まで一通り通した。</description>
+    <content:encoded><![CDATA[<p>nanochat を fork して、日本語に寄せた小型モデルを作った。名前は nano-ja。合成データ作りから、tokenizer、pretrain、SFT、GGUF 化、WebGPU のデモ公開まで一通り通した。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>記事の書き方メモ</title>
     <link>https://kubobeem.tech/#2026-10-20-markdown-memo</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-20-markdown-memo</guid>
     <pubDate>Tue, 20 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>自分用のメモ。記事は posts/ に markdown ファイルを置いて、posts.json にファイル名を足すだけ。</p>]]></description>
+    <category>このブログ</category>
+    <description>自分用のメモ。記事は posts/ に markdown ファイルを置いて、posts.json にファイル名を足すだけ。</description>
+    <content:encoded><![CDATA[<p>自分用のメモ。記事は posts/ に markdown ファイルを置いて、posts.json にファイル名を足すだけ。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>Android の YouTube Music クライアントを Windows の exe にした</title>
     <link>https://kubobeem.tech/#2026-10-18-unkotune-desktop</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-18-unkotune-desktop</guid>
     <pubDate>Sun, 18 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>ArchiveTune という Android 用の YouTube Music クライアントを fork して、エミュレータも VM も使わずに Windows の単体 exe で動かした。名前は途中で Unkotune に変えて、v0.1.0 として公開した。</p>]]></description>
+    <category>デスクトップアプリ</category>
+    <description>ArchiveTune という Android 用の YouTube Music クライアントを fork して、エミュレータも VM も使わずに Windows の単体 exe で動かした。名前は途中で Unkotune に変えて、v0.1.0 として公開した。</description>
+    <content:encoded><![CDATA[<p>ArchiveTune という Android 用の YouTube Music クライアントを fork して、エミュレータも VM も使わずに Windows の単体 exe で動かした。名前は途中で Unkotune に変えて、v0.1.0 として公開した。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>YMM4 のプロジェクトを編集する単一 HTML のエディタを作った</title>
     <link>https://kubobeem.tech/#2026-10-17-ymm4-editor</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-17-ymm4-editor</guid>
     <pubDate>Sat, 17 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>YukkuriMovieMaker4 のプロジェクトファイル（.ymmp）を、ブラウザで開いて編集できるツールを作った。index.html 1枚、依存ゼロ、ビルド不要。</p>]]></description>
+    <category>リバースエンジニアリング</category>
+    <description>YukkuriMovieMaker4 のプロジェクトファイル（.ymmp）を、ブラウザで開いて編集できるツールを作った。index.html 1枚、依存ゼロ、ビルド不要。</description>
+    <content:encoded><![CDATA[<p>YukkuriMovieMaker4 のプロジェクトファイル（.ymmp）を、ブラウザで開いて編集できるツールを作った。index.html 1枚、依存ゼロ、ビルド不要。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>ファイル共有サービスを、公開できるところまで整えた</title>
     <link>https://kubobeem.tech/#2026-10-07-superfile</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-10-07-superfile</guid>
     <pubDate>Wed, 07 Oct 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>自分用に作っていたファイル共有サービス（Cloudflare Pages Functions + D1 + KV、ファイル実体は Telegram Bot）を、人に見せられる状態まで整備した。</p>]]></description>
+    <category>Web</category>
+    <description>自分用に作っていたファイル共有サービス（Cloudflare Pages Functions + D1 + KV、ファイル実体は Telegram Bot）を、人に見せられる状態まで整備した。</description>
+    <content:encoded><![CDATA[<p>自分用に作っていたファイル共有サービス（Cloudflare Pages Functions + D1 + KV、ファイル実体は Telegram Bot）を、人に見せられる状態まで整備した。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>シェーダーパックを書いていて、コンパイルが通る嘘に負けた</title>
     <link>https://kubobeem.tech/#2026-09-29-aether</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-09-29-aether</guid>
     <pubDate>Tue, 29 Sep 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>Minecraft 用のシェーダーパックを書いている。1.21.1 + Iris + Sodium、RTX 4060 の 1080p 想定。遅延 G-buffer で、パスは gbuffers → deferred → composite → TAA → ブルーム → final。</p>]]></description>
+    <category>グラフィックス</category>
+    <description>Minecraft 用のシェーダーパックを書いている。1.21.1 + Iris + Sodium、RTX 4060 の 1080p 想定。遅延 G-buffer で、パスは gbuffers → deferred → composite → TAA → ブルーム → final。</description>
+    <content:encoded><![CDATA[<p>Minecraft 用のシェーダーパックを書いている。1.21.1 + Iris + Sodium、RTX 4060 の 1080p 想定。遅延 G-buffer で、パスは gbuffers → deferred → composite → TAA → ブルーム → final。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>コマンド1個でニュースの縦型ショートを2本作るようにした</title>
     <link>https://kubobeem.tech/#2026-09-26-news-video</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-09-26-news-video</guid>
     <pubDate>Sat, 26 Sep 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>AI と技術のニュースから、15〜30秒の縦型ショートをローカルで自動生成するパイプラインを作った。/news-video を叩くと2本出てくる。</p>]]></description>
+    <category>動画</category>
+    <description>AI と技術のニュースから、15〜30秒の縦型ショートをローカルで自動生成するパイプラインを作った。/news-video を叩くと2本出てくる。</description>
+    <content:encoded><![CDATA[<p>AI と技術のニュースから、15〜30秒の縦型ショートをローカルで自動生成するパイプラインを作った。/news-video を叩くと2本出てくる。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>X の bot 運用を OSS パッケージにまとめた</title>
     <link>https://kubobeem.tech/#2026-09-14-x-bot-oss</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-09-14-x-bot-oss</guid>
     <pubDate>Mon, 14 Sep 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>自分用に作っていた X の bot 運用（投稿・いいね・RT・返信）を、誰でも使えるパッケージ x-bot に整理して GitHub に出した。CLI は xbot。</p>]]></description>
+    <category>X</category>
+    <description>自分用に作っていた X の bot 運用（投稿・いいね・RT・返信）を、誰でも使えるパッケージ x-bot に整理して GitHub に出した。CLI は xbot。</description>
+    <content:encoded><![CDATA[<p>自分用に作っていた X の bot 運用（投稿・いいね・RT・返信）を、誰でも使えるパッケージ x-bot に整理して GitHub に出した。CLI は xbot。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>X の bot をタスクスケジューラで回し続けるようにした</title>
     <link>https://kubobeem.tech/#2026-09-13-xbot-auto</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-09-13-xbot-auto</guid>
     <pubDate>Sun, 13 Sep 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>前は手で叩いていた X の bot を、Windows のタスクスケジューラから opencode run を呼ぶ形で自動運用にした。30分おきに起きて、TL を見て、いいねと返信をして、たまに投稿する。</p>]]></description>
+    <category>X</category>
+    <description>前は手で叩いていた X の bot を、Windows のタスクスケジューラから opencode run を呼ぶ形で自動運用にした。30分おきに起きて、TL を見て、いいねと返信をして、たまに投稿する。</description>
+    <content:encoded><![CDATA[<p>前は手で叩いていた X の bot を、Windows のタスクスケジューラから opencode run を呼ぶ形で自動運用にした。30分おきに起きて、TL を見て、いいねと返信をして、たまに投稿する。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>ターミナルで YouTube を ASCII 再生するツールに色を足した</title>
     <link>https://kubobeem.tech/#2026-09-12-ascii-video-player</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-09-12-ascii-video-player</guid>
     <pubDate>Sat, 12 Sep 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>ascii-video-player という、YouTube の動画を ASCII アートにしてターミナルで流すツールを fork して、トゥルーカラー対応を入れた。</p>]]></description>
+    <category>グラフィックス</category>
+    <description>ascii-video-player という、YouTube の動画を ASCII アートにしてターミナルで流すツールを fork して、トゥルーカラー対応を入れた。</description>
+    <content:encoded><![CDATA[<p>ascii-video-player という、YouTube の動画を ASCII アートにしてターミナルで流すツールを fork して、トゥルーカラー対応を入れた。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>Vib-Ribbon 風のゲームを Cloudflare Pages に置いた</title>
     <link>https://kubobeem.tech/#2026-08-31-vibribbon</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-08-31-vibribbon</guid>
     <pubDate>Mon, 31 Aug 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>音源をドラッグ&amp;ドロップすると地形が生えて、それに合わせて走るゲームを作った。Vib-Ribbon のパクリ。素の HTML と JavaScript だけで、ビルドは無し。</p>]]></description>
+    <category>Web</category>
+    <description>音源をドラッグ&amp;amp;ドロップすると地形が生えて、それに合わせて走るゲームを作った。Vib-Ribbon のパクリ。素の HTML と JavaScript だけで、ビルドは無し。</description>
+    <content:encoded><![CDATA[<p>音源をドラッグ&amp;amp;ドロップすると地形が生えて、それに合わせて走るゲームを作った。Vib-Ribbon のパクリ。素の HTML と JavaScript だけで、ビルドは無し。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>ファイル共有のアップロードが遅いので並列にした</title>
     <link>https://kubobeem.tech/#2026-08-31-superfile-speed</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-08-31-superfile-speed</guid>
     <pubDate>Mon, 31 Aug 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>自分のファイル共有（Cloudflare Worker から Telegram Bot API に流すやつ）が遅かったので、並列化とレート制御を入れた。</p>]]></description>
+    <category>Web</category>
+    <description>自分のファイル共有（Cloudflare Worker から Telegram Bot API に流すやつ）が遅かったので、並列化とレート制御を入れた。</description>
+    <content:encoded><![CDATA[<p>自分のファイル共有（Cloudflare Worker から Telegram Bot API に流すやつ）が遅かったので、並列化とレート制御を入れた。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>8GB の GPU で動画生成を 176 秒から 55 秒にした</title>
     <link>https://kubobeem.tech/#2026-08-30-minimax-h3</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-08-30-minimax-h3</guid>
     <pubDate>Sun, 30 Aug 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>RTX 4060 8GB で ComfyUI + MiniMax H3（w4a8）を動かして、生成時間を詰めた。結論から言うと 3.2 倍になった。</p>]]></description>
+    <category>生成AI</category>
+    <description>RTX 4060 8GB で ComfyUI + MiniMax H3（w4a8）を動かして、生成時間を詰めた。結論から言うと 3.2 倍になった。</description>
+    <content:encoded><![CDATA[<p>RTX 4060 8GB で ComfyUI + MiniMax H3（w4a8）を動かして、生成時間を詰めた。結論から言うと 3.2 倍になった。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
   <item>
     <title>WSL なしで「AI 部下10人」を Windows ネイティブに移植した</title>
     <link>https://kubobeem.tech/#2026-08-28-shogun</link>
     <guid isPermaLink="false">https://kubobeem.tech/#2026-08-28-shogun</guid>
     <pubDate>Fri, 28 Aug 2026 00:00:00 +0900</pubDate>
-    <description><![CDATA[<p><img src="https://kuboes.ninja/og.png" alt=""></p><p>Zenn で流行っていた multi-agent-shogun（Claude Code 用のマルチエージェント）を、WSL なしの Windows ネイティブで動かした。将軍＋軍師＋足軽の構成を PowerShell で組み直して、D:\code\opencode-shogun に置いた。</p>]]></description>
+    <category>opencode</category>
+    <description>Zenn で流行っていた multi-agent-shogun（Claude Code 用のマルチエージェント）を、WSL なしの Windows ネイティブで動かした。将軍＋軍師＋足軽の構成を PowerShell で組み直して、D:\code\opencode-shogun に置いた。</description>
+    <content:encoded><![CDATA[<p>Zenn で流行っていた multi-agent-shogun（Claude Code 用のマルチエージェント）を、WSL なしの Windows ネイティブで動かした。将軍＋軍師＋足軽の構成を PowerShell で組み直して、D:\code\opencode-shogun に置いた。</p>]]></content:encoded>
+    <media:thumbnail url="https://kubobeem.tech/images/og.png" width="1280" height="720" />
+    <media:content url="https://kubobeem.tech/images/og.png" type="image/png" medium="image" width="1280" height="720" />
   </item>
 </channel>
 </rss>
